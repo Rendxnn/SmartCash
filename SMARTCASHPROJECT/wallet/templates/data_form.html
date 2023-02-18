@@ -18,7 +18,7 @@
 					    <p class="card-text">Tus datos serán utilizados para saber tu estado financiero actual y no serán compartidos con nadie.</p>
 					  </div>
 					</div>
-					<form action = "">
+					<form action = "{% url 'home' %}">
 				<div class="input-group mb-3 my">
 				  <span class="input-group-text" id="basic-addon1">$</span>
 				  <input type="text" class="form-control" placeholder="Ingresa tu promedio de ingresos mensual: " name = "average_income">
@@ -57,14 +57,13 @@
 				<br>
 
 				<br>
-
-				<button type="submit" class="btn btn-primary">Continuar</button>
-
+				
+					<button type="submit" class="btn btn-primary"> Continuar </button>
 			</div>
 
 		</div>
 
 	</form>
-	
+
 </body>
 </html>	
