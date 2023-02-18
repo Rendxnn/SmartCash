@@ -19,6 +19,5 @@ from wallet import views as wallet_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', wallet_views.home),
-    path('about/', wallet_views.about)
+    path('data_form/', wallet_views.data_form),
 ]
