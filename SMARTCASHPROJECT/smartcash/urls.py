@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('data_form/', wallet_views.data_form, name='dataaform'),
     path('home/', wallet_views.home, name='home'),
-    path('movements/', wallet_views.movements, name='movements')
+    path('movements/', wallet_views.movements, name='movements'),
+    path('categories/', wallet_views.categories, name='categories'),
 ]

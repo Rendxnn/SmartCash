@@ -1,0 +1,4 @@
+in, casa, 100, arriendos,
+out, reloj, 3000, lujos, 
+out, almuerzo, 14000, esenciales, 
+out, arriendo, 12312, esenciales, 

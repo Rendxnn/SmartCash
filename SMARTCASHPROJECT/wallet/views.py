@@ -38,9 +38,15 @@ def movements(request):
 
     incomes = request.GET.get('incomes')
     exits = request.GET.get('exits')
-    movements = mov.readIncomes(incomes) + mov.readExits(exits)
-    print(incomes, exits)
+    movements = mov.read_movements(incomes, exits)
+
     return render(request, 'movements.html', {'average_income': average_income, 'life_cost_average': life_cost_average,
                                               'month_income': month_income, 'month_life_expenses': month_life_expenses,
                                               'month_expenses': month_expenses, 'current_savings': current_savings,
                                               'movements': movements})
+
+
+def categories(request):
+    category = request.GET.get('category')
+    matches = mov.consult_category(category)
+    return render(request, 'categories.html', {'category': category, 'matches': matches})
