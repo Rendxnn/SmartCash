@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from wallet import movements as mov
 
 
 def data_form(request):
@@ -28,4 +29,18 @@ def home(request):
 
 
 def movements(request):
-    return render(request, 'movements.html')
+    average_income = request.GET.get('average_income')
+    life_cost_average = request.GET.get('life_cost_average')
+    month_income = request.GET.get('month_income')
+    month_life_expenses = request.GET.get('month_life_expenses')
+    month_expenses = request.GET.get('month_expenses')
+    current_savings = request.GET.get('current_savings')
+
+    incomes = request.GET.get('incomes')
+    exits = request.GET.get('exits')
+    movements = mov.readIncomes(incomes) + mov.readExits(exits)
+    print(incomes, exits)
+    return render(request, 'movements.html', {'average_income': average_income, 'life_cost_average': life_cost_average,
+                                              'month_income': month_income, 'month_life_expenses': month_life_expenses,
+                                              'month_expenses': month_expenses, 'current_savings': current_savings,
+                                              'movements': movements})

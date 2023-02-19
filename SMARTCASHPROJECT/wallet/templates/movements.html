@@ -43,5 +43,53 @@
 		    </div>
 		  </div>
 		</nav>
+		<br>
+		<form action="">
+		<div class = "container">
+			<div class="form-text">Registro de ingresos de dinero.</div>
+			<br>
+			<div class="input-group">
+
+			
+			<span class="input-group-text mb-3">Movimiento, Valor, Categoría</span>
+			<textarea class="form-control mb-3" aria-label="With textarea" placeholder="Ingrese los movimientos a registrar con nombre, valor y categoría separados por comas, separando entre movimientos con puntos. (Ej: Arriendo, 500000, esenciales. Reloj, 200000, lujos)." name = "incomes"></textarea>
+
+			
+		</div>
+	</div>
+
+	<br>
+
+	<div class = "container">
+			<div class="form-text">Registro de salidas de dinero.</div>
+			<br>
+			<div class="input-group">
+
+			<span class="input-group-text mb-3">Movimiento, Valor, Categoría</span>
+			<textarea class="form-control mb-3" aria-label="With textarea" placeholder="Ingrese los movimientos a registrar con nombre, valor y categoría separados por comas, separando entre movimientos con puntos. (Ej: Arriendo, 500000, esenciales. Reloj, 200000, lujos)." name="exits"></textarea>
+
+			</div>
+
+			<br>
+			<br>
+			<button type="submit" class="btn btn-primary mb-3"> Registrar Movimientos </button>
+
+		</form>
+			
+	
+		<br>
+		<br>
+		<br>
+		<ul>
+
+			{% for movement in movements %}
+			<p>{{movement}}</p>
+			{% endfor %}
+		</ul>
+	</div>
+
+
+
+		
 </body>
 </html>
