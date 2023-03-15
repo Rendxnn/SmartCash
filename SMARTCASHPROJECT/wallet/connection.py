@@ -2,7 +2,7 @@ import mysql.connector
 from datetime import date
 
 
-connection = mysql.connector.connect(user='root', password='Dragonball2004*', host='localhost',
+connection = mysql.connector.connect(user='root', password='root', host='localhost',
                                      database='smartcash', port='3306')
 
 

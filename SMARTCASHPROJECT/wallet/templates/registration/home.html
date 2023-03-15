@@ -1,11 +1,13 @@
+{%load static%}	
 <head>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-		crossorigin="anonymous">
-</head>
-
+			crossorigin="anonymous">
+	
+	</head>
 
 
 {% if user.is_authenticated %}
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container">
@@ -113,7 +115,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 </head>
 
 <body>
@@ -129,17 +131,12 @@
 			<div class="collapse navbar-collapse" id="navbarS">
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a href="#" class="nav-link">Inicio</a>
+						<a href="{% url 'login' %}" class="nav-link">Iniciar Sesión</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Nosotros</a>
+						<a href="{% url 'register' %}" class="nav-link">Registrarme</a>					
 					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link">Servicios</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link">Equipo</a>
-					</li>
+					
 				</ul>
 			</div>
 		</div>
@@ -160,21 +157,19 @@
 		<div class="carousel-inner">
 
 			<div class="carousel-item active">
-				<img src="https://soyemprendedor.co/wp-content/uploads/2016/12/dinero-ahorro-dolares-marrano.jpg"
+				<img src="https://wallpapercave.com/wp/wp3137865.jpg"
 					class="d-block w-100" alt="">
 				<div class="carousel-caption">
 					<h5> Bienvenido </h5>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, sapiente, ad, sint saepe assumenda
-						dolorem tempore quas maxime sunt ut aliquam praesentium voluptas officia recusandae nulla soluta
-						blanditiis consequatur ex.
+						SmartCash es una aplicación que te ayudará a mejorar tu vida financiera
 					</p>
-					<a href="#" class="btn btn-primary mt-3">Mas informacion</a>
+					<a href="#" class="btn btn-primary mt-3">Más información</a>
 				</div>
 			</div>
 
 			<div class="carousel-item">
-				<img src="https://soyemprendedor.co/wp-content/uploads/2016/12/dinero-ahorro-dolares-marrano.jpg"
+				<img src="https://trome.pe/resizer/ZJ28fYjDOmYKbbHvRM5JbK2_F2w=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/3XB23A64TVAJHLKXDAB36HL5SU.jpg"
 					class="d-block w-100" alt="">
 				<div class="carousel-caption">
 					<h5> Bienvenido </h5>
@@ -386,8 +381,7 @@
 										class="card-img-top" alt="...">
 									<br>
 									<br>
-									<a href="{% url 'login' %}" class="btn btn-success">Iniciar Sesión</a>
-									<a href="{% url 'register' %}" class="btn btn-success">Registrarme</a>
+									
 
 								</div>
 							</div>
